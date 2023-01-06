@@ -19,7 +19,7 @@ Make sure that these files are deployed on your GitHub repository.
 
 `docker run -p 6379:6379 redisdocker`
 
-`If you want to connect to your redis instance, you`ll need to disable protected mode in redis.conf, Line 94, but changed "yes" to "no" - protected-mode no, then rebuilding docker image and then you`ll be able to telnet localhost 6379`
+`If you want to connect to your redis instance, you'll need to disable protected mode in redis.conf, Line 94, but changed "yes" to "no" - protected-mode no, then rebuilding docker image and then you`ll be able to telnet localhost 6379`
 
 FYI: if you are running it locally, not via docker, it will show 500 Error because it will be missing APP_KEY in .env file.  Normally it would be initated in Kubernetes when we run init.php file.
 
