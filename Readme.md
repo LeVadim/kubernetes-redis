@@ -14,6 +14,14 @@ Just in case, please see below an explanation of each folder:
 
 Make sure that these files are deployed on your GitHub repository.
 
+# Build & Run docker locally:
+`docker build -t redisdocker .`
+
+`docker run -p 6379:6379 redisdocker`
+
+`If you want to connect to your redis instance, you`ll need to disable protected mode in redis.conf, Line 94, but changed "yes" to "no" - protected-mode no, then rebuilding docker image and then you`ll be able to telnet localhost 6379`
+
+FYI: if you are running it locally, not via docker, it will show 500 Error because it will be missing APP_KEY in .env file.  Normally it would be initated in Kubernetes when we run init.php file.
 
 # Additionally, please refer to `Cheatsheet.md` for list of useful commands or see below.
 I suggest always having some sort of "Cheat Sheet".  This is where you store all the commands that you use in your daily life.  It doesn't make sense to memorize every single command, it is just not feasible.  This is why I suggest saving this cheat sheet that you will use in this course and improving it later on as you go.
